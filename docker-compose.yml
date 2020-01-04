@@ -5,6 +5,8 @@ services:
     working_dir: /usr/local/app
     command: npm run start:dev
     restart: on-failure
+    environment:
+      PORT: 8000
     ports:
       - '8000:8000'
     volumes:
