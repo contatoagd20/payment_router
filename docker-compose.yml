@@ -1,7 +1,10 @@
 version: '3'
 services:
   payment_router:
-    build: .
+    image: node:10-alpine
+    working_dir: /usr/local/app
+    command: npm run start:dev
+    restart: on-failure
     ports:
       - '8000:8000'
     volumes:
